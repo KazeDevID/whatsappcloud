@@ -3,11 +3,6 @@
 This library will make it easier for you to create WhatsApp bots, and it is official because of the WhatsApp cloud api framework.
 
 
-<img src="https://img.shields.io/npm/v/whatsappcloud"
-    alt="Whatsapp Cloud API"/>
-
-<img src="https://img.shields.io/npm/dw/whatsappcloud"
-    alt="Whatsapp Cloud API"/>
 <br/>
 
 The <b>easiest</b>, most intuitive way for <b>businesses</b> and <b>developers</b> to start building on the <b>Whatsapp Cloud API</b>.
