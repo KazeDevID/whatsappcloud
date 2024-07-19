@@ -1,34 +1,23 @@
-name: Publish to NPM
+name: "🚀 publish"
 
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches: 
+        - main
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    environment: Staging Environment
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-      - run: npm i
-      - run: npm test
-        env:
-          graphAPIVersion: ${{secrets.GRAPHAPIVERSION}}
-
-  publish-npm:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          registry-url: https://registry.npmjs.org/
-      - run: npm i
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN_IN_GITHUB_ACTIONS}}
+    release:
+        name: 🚀 publish
+        runs-on: ubuntu-latest
+        steps:
+            - name: 📚 checkout
+              uses: actions/checkout@v3.4.0
+            - name: 🟢 node
+              uses: actions/setup-node@v3.6.0
+              with:
+                  node-version: 12
+                  registry-url: https://registry.npmjs.org
+            - name: 🚀 publish
+              run: npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN_IN_GITHUB_ACTIONS}}
