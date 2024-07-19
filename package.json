@@ -25,7 +25,8 @@
         "business-api",
         "whatsapp-business-api",
         "meta",
-        "graph api"
+        "graph api",
+        "whatsapp-web"
     ],
     "repository": {
         "type": "git",
